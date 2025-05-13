@@ -88,6 +88,7 @@ lamp{
 .toiletries{
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .sink-container{
@@ -140,9 +141,19 @@ stand{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border: none;
 }
-.toilet-container img{
+.toilet{
     height: 100%;
+    width: 100%;
+    background-image: url('images/closed.png');
+    background-size: cover; /* Adjusts the image to cover the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.open-toilet .toilet{
+    background-image: url('images/opened.png');
 }
 
 .light-switch-container{
@@ -179,6 +190,7 @@ stand{
     width: 100%;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 .left-door{
@@ -189,6 +201,7 @@ stand{
     z-index: 11;
     transform-origin: left;
     transition: transform 1s ease;
+    pointer-events: auto;
 }
 
 .right-door{
@@ -206,6 +219,8 @@ stand{
     transform-origin: -70%;
     transition: transform 1s ease;
     cursor: pointer;
+    pointer-events: auto;
+
 }
 .handle{
     background-color: var(--black);
